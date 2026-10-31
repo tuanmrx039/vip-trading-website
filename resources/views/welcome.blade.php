@@ -187,27 +187,20 @@
       /* pricing */
       .price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; align-items: stretch; }
       @media (max-width: 920px) { .price-grid { grid-template-columns: 1fr; } }
-      .price-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-      @media (max-width: 1080px) { .price-grid { grid-template-columns: repeat(2, 1fr); } }
-      @media (max-width: 640px) { .price-grid { grid-template-columns: 1fr; } }
       .price-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; display: flex; flex-direction: column; }
-      .price-card.featured { border: 2px solid var(--accent); position: relative; }
-      .price-card .plan { font-family: "Archivo", sans-serif; font-weight: 800; font-size: 19px; }
-      .price-card .for { color: var(--ink-2); font-size: 14px; margin-top: 4px; min-height: 42px; }
-      .price-amount { margin: 18px 0 6px; font-family: "IBM Plex Mono", monospace; font-size: 28px; color: var(--ink); font-weight: 700; line-height: 1; }
-      .price-amount span { font-size: 14px; color: var(--ink-3); font-weight: 500; font-family: "Manrope", sans-serif; }
-      .price-tag { margin: 0 0 12px; font-family: "IBM Plex Mono", monospace; font-size: 13.5px; color: var(--accent-strong); font-weight: 600; }
-      .price-card ul { margin: 12px 0 24px; padding: 0; display: grid; gap: 9px; font-size: 14.5px; color: var(--ink-2); }
+      .price-card.featured { border: 2px solid var(--accent); }
+      .price-card .plan { font-family: "Archivo", sans-serif; font-weight: 800; font-size: 20px; }
+      .price-card .for { color: var(--ink-2); font-size: 14.5px; margin-top: 4px; }
+      .price-tag { margin: 20px 0 4px; font-family: "IBM Plex Mono", monospace; font-size: 15px; color: var(--accent-strong); font-weight: 600; }
+      .price-card ul { margin: 16px 0 24px; padding: 0; display: grid; gap: 9px; font-size: 15px; color: var(--ink-2); }
       .price-card li { list-style: none; display: flex; gap: 9px; }
       .price-card li::before { content: "✓"; color: var(--up); font-weight: 800; }
       .checkout-btn {
-        margin-top: auto; text-align: center; padding: 13px; border-radius: 11px; font-weight: 700; font-size: 15px;
-        background: var(--accent); color: #161006; border: none; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-        transition: transform 0.15s ease, background 0.15s ease;
+        margin-top: auto; text-align: center; padding: 13px; border-radius: 11px; font-weight: 700; font-size: 15.5px;
+        background: var(--surface-2); color: var(--ink-3); border: 1px dashed var(--ink-3); cursor: not-allowed; text-decoration: none; display: block;
       }
-      .checkout-btn:hover { background: var(--accent-strong); transform: translateY(-1px); }
-      .checkout-note { font-size: 12.5px; color: var(--ink-3); text-align: center; margin-top: 10px; }
-      .soon-tag { align-self: flex-start; font-size: 11px; font-weight: 800; letter-spacing: 0.05em; background: var(--accent-soft); color: var(--accent-strong); padding: 4px 10px; border-radius: 999px; margin-bottom: 12px; }
+      .checkout-note { font-size: 13px; color: var(--ink-3); text-align: center; margin-top: 10px; }
+      .soon-tag { align-self: flex-start; font-size: 12px; font-weight: 800; letter-spacing: 0.05em; background: var(--accent-soft); color: var(--accent-strong); padding: 4px 10px; border-radius: 999px; margin-bottom: 14px; }
 
       /* ---------- FAQ / waitlist / disclaimer ---------- */
       .faq { display: grid; gap: 0; border-top: 1px solid var(--line); }
@@ -245,9 +238,8 @@
           <a href="#sinyal">Contoh Sinyal</a>
           <a href="#paket">Paket VIP</a>
           <a href="#faq">FAQ</a>
-          <a href="https://t.me/+ZmLQ2kf8TmVmZDY1" target="_blank" rel="noopener noreferrer">Telegram VIP</a>
         </div>
-        <a class="nav-cta" href="https://t.me/+ZmLQ2kf8TmVmZDY1" target="_blank" rel="noopener noreferrer">Gabung Telegram</a>
+        <a class="nav-cta" href="#daftar">Daftar Tunggu</a>
       </div>
     </nav>
 
@@ -258,8 +250,8 @@
           <h1>Sinyal Forex &amp; Crypto dengan rencana yang <em>jelas sejak awal</em>.</h1>
           <p class="lead">Setiap sinyal VIP dilengkapi entry, stop loss, take profit, dan risk-reward ratio — bukan sekadar tebakan arah. Paket Bundle juga mencakup bot auto trading, khusus untuk member berbayar.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#paket">Lihat Paket &amp; Harga</a>
-            <a class="btn btn-ghost" href="https://t.me/+ZmLQ2kf8TmVmZDY1" target="_blank" rel="noopener noreferrer">Grup Telegram VIP</a>
+            <a class="btn btn-primary" href="#paket">Lihat Paket VIP</a>
+            <a class="btn btn-ghost" href="#sinyal">Lihat Contoh Sinyal</a>
           </div>
           <div class="hero-points">
             <ul>
@@ -379,85 +371,59 @@
     <section id="paket">
       <div class="wrap">
         <div class="sec-head">
-          <h2>Paket VIP &amp; Membership</h2>
-          <p>Pilih sesuai kebutuhan trading kamu. Tersedia keanggotaan VIP sinyal, edukasi, hingga bot auto trading resmi berlisensi.</p>
+          <h2>Paket VIP</h2>
+          <p>Pilih sesuai pasar yang kamu tradingkan. Semua paket berisi sinyal terstruktur dengan manajemen risiko — bukan grup “signal asal bunyi”. Harga final dan masa aktif akan tampil di halaman checkout resmi saat penjualan dibuka.</p>
         </div>
         <div class="price-grid">
-          <!-- 1. PREMIUM MEMBERSHIP 2 -->
           <article class="price-card">
-            <span class="soon-tag">VIP TIER 2</span>
-            <div class="plan">PREMIUM MEMBERSHIP 2</div>
-            <p class="for">Akses grup VIP prioritas tier 2 dengan analisis pasar komprehensif</p>
-            <div class="price-amount">$102.00 <span>/ akun</span></div>
-            <div class="price-tag">Qty: 1 • None</div>
+            <span class="soon-tag">CHECKOUT SEGERA DIBUKA</span>
+            <div class="plan">Sinyal Forex VIP</div>
+            <p class="for">Untuk trader XAU/USD dan major pairs</p>
+            <div class="price-tag">Harga diumumkan di Whop saat rilis</div>
             <ul>
-              <li>Semua sinyal harian VIP Forex &amp; Crypto</li>
-              <li>Setup teknikal lengkap (Entry, SL, TP1–TP3)</li>
-              <li>Akses langsung ke grup VIP Telegram</li>
-              <li>Analisis live market updates &amp; sentimen</li>
-              <li>Prioritas mentoring &amp; tanya jawab</li>
+              <li>Sinyal XAU/USD, EUR/USD, GBP/USD, USD/JPY</li>
+              <li>Entry, SL, TP1–TP2, dan RR di setiap sinyal</li>
+              <li>Analisis konteks setup, bukan angka mentah</li>
+              <li>Update pembatalan &amp; manajemen posisi berjalan</li>
+              <li>Rekap hasil mingguan yang transparan</li>
             </ul>
-            <a class="checkout-btn" href="https://t.me/+ZmLQ2kf8TmVmZDY1" target="_blank" rel="noopener noreferrer">Gabung Telegram VIP</a>
-            <p class="checkout-note">Akses instan via Telegram resmi setelah konfirmasi</p>
+            <a class="checkout-btn" href="#daftar" aria-disabled="true">Checkout via Whop — Segera Hadir</a>
+            <p class="checkout-note">Link checkout Whop aktif setelah produk diterbitkan. Sementara itu, amankan tempat lewat daftar tunggu di bawah.</p>
           </article>
 
-          <!-- 2. PREMIUM MEMBER -->
-          <article class="price-card">
-            <span class="soon-tag">POPULAR</span>
-            <div class="plan">PREMIUM MEMBER</div>
-            <p class="for">Keanggotaan VIP standar untuk sinyal harian &amp; komunitas trader</p>
-            <div class="price-amount">$30.00 <span>/ akun</span></div>
-            <div class="price-tag">Qty: 1 • None</div>
-            <ul>
-              <li>Sinyal harian pair mayor Forex &amp; Crypto</li>
-              <li>Format sinyal terstruktur dengan risk management</li>
-              <li>Akses ruang diskusi member Telegram</li>
-              <li>Update mingguan market overview</li>
-            </ul>
-            <a class="checkout-btn" href="https://t.me/+ZmLQ2kf8TmVmZDY1" target="_blank" rel="noopener noreferrer">Gabung Telegram VIP</a>
-            <p class="checkout-note">Akses instan via Telegram resmi</p>
-          </article>
-
-          <!-- 3. Auto Trading Bot - Software Licence -->
           <article class="price-card featured">
-            <span class="soon-tag">AUTOMATION BOT</span>
-            <div class="plan">Auto Trading Bot</div>
-            <p class="for">Software Licence resmi bot auto trading berkinerja tinggi</p>
-            <div class="price-amount">$299.00 <span>/ year</span></div>
-            <div class="price-tag"><span style="text-decoration:line-through; color:var(--ink-3)">$299.00</span> Promo $0.00 (Slot Terbatas)</div>
+            <span class="soon-tag">PALING LENGKAP</span>
+            <div class="plan">Bundle Bot + Semua Sinyal</div>
+            <p class="for">Sinyal Forex + Crypto + akses bot auto trading</p>
+            <div class="price-tag">Harga diumumkan di Whop saat rilis</div>
             <ul>
-              <li>Lisensi Software Auto Trading Bot 1 Tahun</li>
-              <li>Strategi multi-indikator otomatis (Trend, RSI, MA)</li>
-              <li>Risk control otomatis: Max daily drawdown &amp; SL terintegrasi</li>
-              <li>Support API koneksi broker/exchange terpercaya</li>
-              <li>Panduan instalasi &amp; konsultasi setting bot</li>
+              <li>Semua isi paket Forex VIP dan Crypto VIP</li>
+              <li>Akses bot auto trading (strategi trend, RSI, MA crossover)</li>
+              <li>Panduan penggunaan bot &amp; pengaturan strategi untuk member</li>
+              <li>Pengaturan risiko per trade &amp; batas drawdown</li>
+              <li>Prioritas tanya jawab soal setup &amp; strategi</li>
             </ul>
-            <a class="checkout-btn" href="https://t.me/+ZmLQ2kf8TmVmZDY1" target="_blank" rel="noopener noreferrer">Klaim Lisensi Bot</a>
-            <p class="checkout-note">Hubungi admin untuk aktivasi lisensi software</p>
+            <a class="checkout-btn" href="#daftar" aria-disabled="true">Checkout via Whop — Segera Hadir</a>
+            <p class="checkout-note">Link checkout Whop aktif setelah produk diterbitkan. Sementara itu, amankan tempat lewat daftar tunggu di bawah.</p>
           </article>
 
-          <!-- 4. VIP Trading Signals - Education Membership -->
           <article class="price-card">
-            <span class="soon-tag">EDUCATION &amp; SIGNALS</span>
-            <div class="plan">VIP Trading Signals</div>
-            <p class="for">Education Membership &amp; sinyal edukatif intensif bulanan</p>
-            <div class="price-amount">$99.00 <span>/ month</span></div>
-            <div class="price-tag">Membership Bulanan</div>
+            <span class="soon-tag">CHECKOUT SEGERA DIBUKA</span>
+            <div class="plan">Sinyal Crypto VIP</div>
+            <p class="for">Untuk trader spot &amp; futures crypto</p>
+            <div class="price-tag">Harga diumumkan di Whop saat rilis</div>
             <ul>
-              <li>Edukasi live &amp; webinar strategi mingguan</li>
-              <li>Sinyal edukatif Forex &amp; Crypto harian</li>
-              <li>Bedah chart real-time &amp; price action logic</li>
-              <li>Manajemen psikologi &amp; money management</li>
-              <li>Grup privat Telegram interaktif</li>
+              <li>Sinyal BTC, ETH, SOL, dan altcoin pilihan</li>
+              <li>Entry, SL, TP1–TP2, dan RR di setiap sinyal</li>
+              <li>Level invalidasi yang jelas untuk tiap setup</li>
+              <li>Catatan kondisi pasar (risk-on / risk-off)</li>
+              <li>Rekap hasil mingguan yang transparan</li>
             </ul>
-            <a class="checkout-btn" href="https://t.me/+ZmLQ2kf8TmVmZDY1" target="_blank" rel="noopener noreferrer">Daftar Membership</a>
-            <p class="checkout-note">Akses langsung ke channel materi &amp; diskusi</p>
+            <a class="checkout-btn" href="#daftar" aria-disabled="true">Checkout via Whop — Segera Hadir</a>
+            <p class="checkout-note">Link checkout Whop aktif setelah produk diterbitkan. Sementara itu, amankan tempat lewat daftar tunggu di bawah.</p>
           </article>
         </div>
-        <p style="margin-top:24px; color:var(--ink-2); font-size:15px; text-align:center;">
-          📨 <strong>Channel / Grup Telegram Resmi:</strong> 
-          <a href="https://t.me/+ZmLQ2kf8TmVmZDY1" target="_blank" rel="noopener noreferrer" class="mono" style="color:var(--accent-strong); font-weight:700; text-decoration:underline;">https://t.me/+ZmLQ2kf8TmVmZDY1</a>
-        </p>
+        <p style="margin-top:20px; color:var(--ink-2); font-size:15px">📨 <strong>Pengiriman sinyal:</strong> semua sinyal VIP dikirim lewat grup Telegram khusus member. Tautan undangan grup dibagikan otomatis setelah checkout Whop aktif — placeholder tautan: <span class="mono" style="color:var(--ink-3)">t.me/&lt;grup-vip&gt; (segera)</span>.</p>
       </div>
     </section>
 
@@ -497,10 +463,10 @@
           <form id="wlForm">
             <input type="text" id="wlName" placeholder="Nama panggilan" maxlength="40" required aria-label="Nama panggilan" />
             <select id="wlPlan" aria-label="Paket yang diminati">
-              <option value="PREMIUM MEMBERSHIP 2 ($102.00)">PREMIUM MEMBERSHIP 2 ($102.00)</option>
-              <option value="PREMIUM MEMBER ($30.00)">PREMIUM MEMBER ($30.00)</option>
-              <option value="Auto Trading Bot - Software Licence ($299.00 / year - Promo $0.00)">Auto Trading Bot - Software Licence ($299.00 / year - Promo $0.00)</option>
-              <option value="VIP Trading Signals - Education Membership ($99.00 / month)">VIP Trading Signals - Education Membership ($99.00 / month)</option>
+              <option value="Bundle Bot + Semua Sinyal">Bundle Bot + Semua Sinyal</option>
+              <option value="Sinyal Forex VIP">Sinyal Forex VIP</option>
+              <option value="Sinyal Crypto VIP">Sinyal Crypto VIP</option>
+              <option value="Belum tahu — mau info dulu">Belum tahu — mau info dulu</option>
             </select>
             <button class="btn btn-primary" type="submit">Buat Ringkasan Pendaftaran</button>
           </form>
